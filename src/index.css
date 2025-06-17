@@ -1,0 +1,101 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 15 23 42;
+
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
+
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
+
+    --primary: 30 58 138;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 248 250 252;
+    --secondary-foreground: 15 23 42;
+
+    --muted: 248 250 252;
+    --muted-foreground: 100 116 139;
+
+    --accent: 241 245 249;
+    --accent-foreground: 15 23 42;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 30 58 138;
+
+    --radius: 8px;
+
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 15 23 42;
+    --sidebar-primary: 30 58 138;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 241 245 249;
+    --sidebar-accent-foreground: 15 23 42;
+    --sidebar-border: 226 232 240;
+    --sidebar-ring: 30 58 138;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-slate-50 text-foreground font-inter antialiased;
+    line-height: 1.6;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent;
+  }
+
+  .professional-card {
+    @apply bg-white/95 backdrop-blur-sm border border-slate-200 shadow-md hover:shadow-lg transition-all duration-300 rounded-lg;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-16 lg:py-20;
+  }
+
+  .professional-button {
+    @apply bg-blue-800 hover:bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 inline-flex items-center gap-2;
+  }
+
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l-2 border-blue-200;
+  }
+
+  .timeline-item::before {
+    @apply absolute -left-2 top-0 w-4 h-4 bg-blue-800 rounded-full border-4 border-white shadow-sm;
+    content: '';
+  }
+
+  .skill-progress {
+    @apply h-2 bg-slate-100 rounded-full overflow-hidden;
+  }
+
+  .skill-progress-bar {
+    @apply h-full bg-gradient-to-r from-blue-800 to-blue-600 rounded-full transition-all duration-1000 ease-out;
+  }
+}
