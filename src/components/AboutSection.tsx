@@ -3,8 +3,8 @@ import { MapPin, Briefcase, Home, Download, GraduationCap, User } from 'lucide-r
 const AboutSection = () => {
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/cv.pdf';
-    link.download = 'Le_Ba_Dac_CV.pdf';
+    link.href = '/LeBaDac_CV.pdf';
+    link.download = 'LeBaDac_CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
